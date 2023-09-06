@@ -4,8 +4,8 @@ This project implements Livekit WebRTC communication using MRTK WebRTC package a
 
 ## Specs 
  - Unity version: 2021.3.24f1
- - MRTK WebRTC package version: 2.0
+ - MRTK WebRTC package version: 2.0.2
 
 ## Setup
- 1. Clone repo and open with Unity 2021.3.X
- 2. 
+ 1. Clone repo and open it with Unity 2021.3.X
+ 2. Open `Scenes/SampleScene.unity`
