@@ -539,7 +539,7 @@ Transform:
   - {fileID: 148436205}
   - {fileID: 160486580}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &471480679
 MonoBehaviour:
@@ -554,7 +554,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: ws://127.0.0.1:7880
-  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjk1NzcxOTA5MDgsImlzcyI6IkFQSTN0YkNRV05rOXo5aCIsIm5iZiI6MTY5MDc5ODg1MSwic3ViIjoiVXNlcjEiLCJ2aWRlbyI6eyJjYW5QdWJsaXNoIjp0cnVlLCJjYW5QdWJsaXNoRGF0YSI6dHJ1ZSwiY2FuU3Vic2NyaWJlIjp0cnVlLCJyb29tIjoiVGVzdCIsInJvb21Kb2luIjp0cnVlfX0.yxlC9fglBli84cM0jmf6Cval6A81FVEmPQRqxyQvrRM
+  selectUserUI: {fileID: 1280904083}
+  userToken1: 
+  userToken2: 
   rtcEngine: {fileID: 343471925}
 --- !u!1 &705507993
 GameObject:
@@ -798,7 +800,7 @@ GameObject:
   - component: {fileID: 784193118}
   - component: {fileID: 784193117}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BtnUser1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -869,9 +871,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955111382}
-        m_TargetAssemblyTypeName: WebRTCManager, Assembly-CSharp
-        m_MethodName: SelectUser1
+      - m_Target: {fileID: 471480679}
+        m_TargetAssemblyTypeName: Livekit.LivekitCallManager, Assembly-CSharp
+        m_MethodName: InitWithUser1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -919,54 +921,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784193115}
   m_CullTransparentMesh: 1
---- !u!1 &955111381
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 955111383}
-  - component: {fileID: 955111382}
-  m_Layer: 0
-  m_Name: WebRTC Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &955111382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955111381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95342eec460e1745b57955d40902b27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  callManager: {fileID: 471480679}
-  selectUserUI: {fileID: 1280904083}
-  userToken1: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQwNzg3NjAsImlzcyI6ImRldmtleSIsIm5hbWUiOiJ1c2VyMSIsIm5iZiI6MTY5Mzk5MjM2MCwic3ViIjoidXNlcjEiLCJ2aWRlbyI6eyJyb29tIjoibXktZmlyc3Qtcm9vbSIsInJvb21Kb2luIjp0cnVlfX0.aOjmvIx2bX9B1xA5gk9ydqTQTV-eLMeT9hg_aiQoUtI
-  userToken2: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTM5MjkyMzEsImlzcyI6IkFQSTN0YkNRV05rOXo5aCIsIm5iZiI6MTY5MzkwNzYzMSwic3ViIjoiWmlvY2FuZSIsInZpZGVvIjp7ImNhblB1Ymxpc2giOnRydWUsImNhblB1Ymxpc2hEYXRhIjp0cnVlLCJjYW5TdWJzY3JpYmUiOnRydWUsInJvb20iOiJUZXN0Iiwicm9vbUpvaW4iOnRydWV9fQ.b6ZdIw9QIt4cAX19fZr104N0DsjJx5LKrQPMNsNHbIM
---- !u!4 &955111383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955111381}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42071205, y: 0.27037996, z: -0.8718505}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241287470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1182,7 @@ GameObject:
   - component: {fileID: 1341947820}
   - component: {fileID: 1341947819}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: BtnUser2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1299,9 +1253,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955111382}
-        m_TargetAssemblyTypeName: WebRTCManager, Assembly-CSharp
-        m_MethodName: SelectUser2
+      - m_Target: {fileID: 471480679}
+        m_TargetAssemblyTypeName: Livekit.LivekitCallManager, Assembly-CSharp
+        m_MethodName: InitWithUser2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
