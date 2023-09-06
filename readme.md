@@ -9,3 +9,4 @@ This project implements Livekit WebRTC communication using MRTK WebRTC package a
 ## Setup
  1. Clone repo and open it with Unity 2021.3.X
  2. Open `Scenes/SampleScene.unity`
+ 3. Go to `LivekitVideocall` component and update url and tokens
